@@ -1,0 +1,120 @@
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2); /* light green transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-popup-container {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 35px;
+    width: min(90%, 400px);
+    box-shadow: 0 8px 32px rgba(0, 128, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #444;
+    font-size: 15px;
+    animation: slideUp 0.4s ease;
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #004d00;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login-popup-title img {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.login-popup-title img:hover {
+    transform: scale(1.2);
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-popup-inputs input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #c2e0c6;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+.login-popup-inputs input:focus {
+    border-color: green;
+}
+
+.login-popup-container button {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.login-popup-container button:hover {
+    background-color: #006400;
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    margin-top: -10px;
+    color: #666;
+}
+.login-popup-condition input {
+    margin-top: 3px;
+}
+
+.login-popup p {
+    text-align: center;
+    font-size: 14px;
+}
+.login-popup p span {
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.login-popup p span:hover {
+    color: #004d00;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
